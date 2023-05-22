@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+button {
+    padding: 10px;
+    width: 70px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color: #000;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+}
+
+.app {
+    max-width: 1200px;
+    width: 92%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.header h2 {
+    min-width: fit-content;
+}
+
+.server-message {
+    width: 100%;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.input-div {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px dotted black;
+    position: relative;
+}
+
+.input-div .browse {
+    color: #000;
+    font-weight: bold;
+}
+
+.file {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer
+}
+
+.saved-div, .queued-div {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+    border-radius: 5px;
+    border: 2px dotted black;
+    background-color: azure;
+}
