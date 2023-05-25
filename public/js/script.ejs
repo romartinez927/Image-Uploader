@@ -1,4 +1,4 @@
-const savedForm = document.querySelector("#saved-form")
+<!-- const savedForm = document.querySelector("#saved-form")
 const queuedForm = document.querySelector("#queued-form")
 
 const savedDiv = document.querySelector(".saved-div")
@@ -7,14 +7,15 @@ const inputDiv = document.querySelector(".input-div")
 
 const input = document.querySelector(".input-div input")
 const serverMessage = document.querySelector(".server-message")
-const savedImages = JSON.parse('<%-JSON.stringify(images)%>')
 
 const arrayImages = []
 const deleteImages = []
 
+let savedImages = JSON.parse('<%-JSON.stringify(images)%>')
+
 // IMAGENES GUARDADAS EN SERVER
 
-savedImages && displaySavedImages()
+if (savedImages) displaySavedImages()
 
 function displaySavedImages() {
     let images = ""
@@ -64,7 +65,7 @@ function displayQueuedImages() {
         images += `
         <div class="image">
             <img src="${URL.createObjectURL(image)}" alt="image">
-            <span onclick="deleteQueuedImage(${index})">&times;</span>
+            <span onclick="deleteQueuedImage(`${index}`)">&times;</span>
         </div>
         `
     })
@@ -104,4 +105,4 @@ function sendQueuedImagesToServer() {
     })
 
 
-}
+} -->

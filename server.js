@@ -53,7 +53,7 @@ app.get("/", (req, res) => {
             files.forEach(file => {
                 images.push(file)
             })
-            res.render("index")
+            res.render("index", {images:images})
         } else {
             console.log(err)
         }
@@ -73,6 +73,20 @@ app.post("/upload", (req,res) => {
             res.status(400).end()
         }
     })
+})
+
+app.put("/delete", (req, res) => {
+    const deleteImages = req.body.deleteImages
+    if (deleteImages == "") {
+        res.statusMessage = "Please select an image to delete"
+        res.status(400).end()
+    } else {
+        deleteImages.forEach( image => {
+            unlinkFile("./public/uploads/" + image)
+        })
+        res.statusMessage = "Successfully deleted"
+        res.status(200).end()
+    }
 })
 
 app.listen(PORT, () => {
