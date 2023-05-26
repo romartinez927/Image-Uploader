@@ -4,8 +4,8 @@
   "description": "<!-- Please update value in the {}  -->",
   "main": "server.js",
   "scripts": {
-    "start": "node . 'js'",
-    "test": "nodemon . 'js, ejs'"
+    "dev": "nodemon server.js",
+    "build": "npm i"
   },
   "repository": {
     "type": "git",
